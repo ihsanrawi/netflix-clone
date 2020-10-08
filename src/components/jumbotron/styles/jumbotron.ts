@@ -1,12 +1,10 @@
 import styled from "styled-components/macro";
 
-export const Container = styled.div``;
-
 type Inner = {
   direction?: string;
 };
 
-export const Item = styled.div<Inner>`
+export const Item = styled.div`
   display: flex;
   border-bottom: 8px solid #222;
   padding: 50px 5%;
@@ -60,5 +58,13 @@ export const SubTitle = styled.h2`
 
   @media (max-width: 1000px) {
     font-size: 18px;
+  }
+`;
+
+export const Container = styled.div`
+  @media (max-width: 1000px) {
+    ${Item}:last-of-type h2 {
+      margin-bottom: 50px;
+    }
   }
 `;

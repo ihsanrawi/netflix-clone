@@ -11,8 +11,8 @@ interface JumbotronProps extends JumbotronBaseProps {
 
 export default function Jumbotron({ children, direction = "row" }: JumbotronProps) {
   return (
-    <Item direction={direction}>
-      <Inner>{children}</Inner>
+    <Item>
+      <Inner {...{ direction }}>{children}</Inner>
     </Item>
   );
 }
