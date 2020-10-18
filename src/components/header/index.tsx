@@ -17,6 +17,7 @@ import {
   Search,
   SearchIcon,
   SearchInput,
+  PlayButton,
 } from "./styles/header";
 
 interface HeaderBaseProps {
@@ -71,6 +72,10 @@ Header.Search = function HeaderSearch({ searchTerm, setSearchTerm, ...restProps 
 
 Header.Dropdown = function HeaderDropdown({ children, ...restProps }) {
   return <Dropdown {...restProps}>{children}</Dropdown>;
+};
+
+Header.PlayButton = function HeaderPlayButton({ children, ...restProps }) {
+  return <PlayButton {...restProps}>{children}</PlayButton>;
 };
 
 Header.Frame = function HeaderFrame({ children, ...restProps }: HeaderBaseProps) {
