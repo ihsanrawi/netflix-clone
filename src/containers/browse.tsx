@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useContext } from "react";
 
-import { Header, Loading } from "../components";
+import { Header, Loading, Player } from "../components";
 import { FirebaseContext } from "../context/Firebase";
 import SelectProfilesContainer from "./profiles";
 import * as ROUTES from "../constants/routes";
@@ -93,10 +93,10 @@ export default function BrowseContainer({ slides }) {
               ))}
             </Card.Entities>
             <Card.Feature category={category}>
-              {/* <Player>
-                <Player.Button/>
-                <Player.Video src="/videos/bunny.mp4"/>
-              </Player> */}
+              <Player>
+                <Player.Button />
+                <Player.Video src="/videos/bunny.mp4" />
+              </Player>
             </Card.Feature>
           </Card>
         ))}
