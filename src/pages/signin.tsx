@@ -40,6 +40,7 @@ export default function SignIn() {
         <Form>
           <Form.Title>Sign In</Form.Title>
           {error && <Form.Error>{error}</Form.Error>}
+          <Form.Text>Log in using user1@mail.com and password as the password to test this site.</Form.Text>
           <Form.Base onSubmit={handleSignIn} method="POST">
             <Form.Input
               placeholder="Email address"
